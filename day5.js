@@ -32,6 +32,13 @@ function part2() {
   }
 }
 
+part2reduced();
+function part2reduced() {
+  let lines = require('fs').readFileSync("./day5_input.txt",'utf8').split('\n');
+  lines = lines.map(string=>{return parseInt(string.replace(/[FL]/g,"0").replace(/[BR]/g,"1"),2)}).sort((a,b)=>{return a - b});
+  console.log(lines.sort((a,b)=>{return a - b}).filter(line=>{return (lines[lines.indexOf(line)-1] != line -1)}));
+}
+
 function testPasses() {
   let ret = consumeInput("FBFBBFFRLR",0,127,0,7);
   console.log(ret);
