@@ -48,19 +48,12 @@ function part2() {
       for (char of line) {
         thisAlpha[char.charCodeAt(0)-97] = char;
       }
-      //console.log(alphabet);
-      //console.log(thisAlpha);
       if (first == false) {
         for(i = 0; i < 26; i++) {
           if (alphabet[i] == String.fromCharCode(i+97) && thisAlpha[i] != String.fromCharCode(i+97)) {
             alphabet[i] = undefined;
           }
-          if (alphabet[i] != String.fromCharCode(i+97) && thisAlpha[i] == String.fromCharCode(i+97)) {
-            //not in original
-            //alphabet[i] = thisAlpha[i];
-          }
         }
-
       } else {
         alphabet = thisAlpha;
         first = false;
