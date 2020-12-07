@@ -50,7 +50,7 @@ function part2() {
       }
       if (first == false) {
         for(i = 0; i < 26; i++) {
-          if (alphabet[i] == String.fromCharCode(i+97) && thisAlpha[i] != String.fromCharCode(i+97)) {
+          if (alphabet[i] && !thisAlpha[i]) {
             alphabet[i] = undefined;
           }
         }
