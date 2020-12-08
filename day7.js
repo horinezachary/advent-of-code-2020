@@ -6,7 +6,7 @@ function part1() {
   let bags = [];
   for (line of lines) {
     let holder = line.substring(0,line.indexOf("s contain "));
-    console.log(line);
+    //console.log(line);
     let contents = line.match(/([0-9]+ [a-z ]*)(?:bag)/g);
     if (!contents) {
       contents = [];
@@ -14,7 +14,7 @@ function part1() {
     for (i in contents) {
       contents[i] = contents[i].substring(contents[i].search(/[a-z]/));
     }
-    console.log(contents);
+    //console.log(contents);
     bags.push({holder,contents})
   }
   let bagList = containsBag(bags,"shiny gold bag");
@@ -26,7 +26,7 @@ function part2() {
   let bags = [];
   for (line of lines) {
     let holder = line.substring(0,line.indexOf("s contain "));
-    console.log(line);
+    //console.log(line);
     let contents = line.match(/([0-9]+ [a-z ]*)(?:bag)/g);
     if (!contents) {
       contents = [];
@@ -36,7 +36,7 @@ function part2() {
       let name = contents[i].substring(contents[i].search(/[a-z]/));
       contents[i] = {name,number};
     }
-    console.log(contents);
+    //console.log(contents);
     bags.push({holder,contents})
   }
   let containedBags = countBags(bags,"shiny gold bag") -1;
@@ -44,13 +44,13 @@ function part2() {
 }
 
 function containsBag(bags, target) {
-  console.log("TARGET: " + target);
+  //console.log("TARGET: " + target);
   let bagList = [];
   for (bag of bags) {
     let baggyboi = bag;
     if (contains(bag.contents,target)) {
-      console.log(baggyboi);
-      console.log(bag);
+      //console.log(baggyboi);
+      //console.log(bag);
       if (!contains(bagList,baggyboi.holder)) {
         bagList.push(baggyboi.holder);
         let innerBaglist = containsBag(bags,baggyboi.holder);
@@ -66,18 +66,18 @@ function containsBag(bags, target) {
 }
 
 function countBags(bags,target) {
-  console.log("TARGET: " + target);
+  //console.log("TARGET: " + target);
   let count = 0;
   for (bag of bags) {
     let baggyboi = bag;
     if (baggyboi.holder == target) {
-      console.log(baggyboi.contents);
+      //console.log(baggyboi.contents);
       for (innerBag of baggyboi.contents) {
         count += (innerBag.number * countBags(bags,innerBag.name));
       }
     }
   }
-  console.log("Count: " + count);
+  //console.log("Count: " + count);
   return count+1;
 }
 
