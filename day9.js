@@ -1,10 +1,8 @@
 let p1 = part1();
-console.log(p1);
+console.log("Part 1: "+p1);
 let p2 = part2(p1);
 console.log(p2);
 getValue(p2.i,p2.j);
-
-console.log(parseInt(p2.iline) + parseInt(p2.jline));
 
 function part1() {
   let lines = readFile("./day9_input.txt");
@@ -26,13 +24,11 @@ function part1() {
 function part2(part1) {
   let lines = readFile("./day9_input.txt");
   for (i = 0; i < lines.length; i++) {
-    let iline = lines[i];
     let counter = 0;
     for (j = i; j < lines.length; j++) {
       counter += parseInt(lines[j]);
       if (counter == part1) {
-        console.log(iline +":"+lines[j]);
-        return {i,j,"iline":lines[i],"jline":lines[j]};
+        return {i,j};
       } else if (counter > part1) {
         counter = 0;
         break;
@@ -55,6 +51,7 @@ function getValue(low,high) {
   }
   let result = min+max;
   console.log({min,max,result});
+  console.log("Part 2: "+result);
 }
 
 function readFile(filename) {
