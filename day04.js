@@ -3,7 +3,7 @@ part1();
 part2();
 
 function part1() {
-  let lines = readFile("./day4_input.txt");
+  let lines = readFile("./day04_input.txt");
   let validPassports = 0;
   let currentPassport = [];
   for (line of lines) {
@@ -24,7 +24,7 @@ function part1() {
 }
 
 function part2() {
-  let lines = readFile("./day4_input.txt");
+  let lines = readFile("./day04_input.txt");
   let validPassports = 0;
   let currentPassport = [];
   for (line of lines) {

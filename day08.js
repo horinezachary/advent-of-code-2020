@@ -37,10 +37,10 @@ function part1() {
 }
 
 function part2() {
-  let originalLines = readFile("./day8_input.txt");
+  let originalLines = readFile("./day08_input.txt");
   console.log(originalLines);
   for (i = 0; i < originalLines.length; i++) {
-    let lines = readFile("./day8_input.txt");
+    let lines = readFile("./day08_input.txt");
     console.log(lines);
     let inst = getInst(lines,i);
     let sign = "-";

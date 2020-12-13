@@ -5,7 +5,7 @@ console.log(p2);
 getValue(p2.i,p2.j);
 
 function part1() {
-  let lines = readFile("./day9_input.txt");
+  let lines = readFile("./day09_input.txt");
   for (i = 25; i < lines.length; i++) {
     valid = false;
     for (j = 1; j <= 25; j++) {
@@ -22,7 +22,7 @@ function part1() {
 }
 
 function part2(part1) {
-  let lines = readFile("./day9_input.txt");
+  let lines = readFile("./day09_input.txt");
   for (i = 0; i < lines.length; i++) {
     let counter = 0;
     for (j = i; j < lines.length; j++) {
@@ -38,7 +38,7 @@ function part2(part1) {
 }
 
 function getValue(low,high) {
-  let lines = readFile("./day9_input.txt");
+  let lines = readFile("./day09_input.txt");
   let min = 999999999999999;
   let max = 0;
   for (i = low; i <= high; i++) {

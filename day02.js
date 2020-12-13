@@ -2,7 +2,7 @@ part1();
 part2();
 
 function part1() {
-  var lines = readFile('day2_input.txt');
+  var lines = readFile('day02_input.txt');
   let counter = 0;
   let linenum = 0;
   for (line of lines) {
@@ -20,7 +20,7 @@ function part1() {
 }
 
 function part2() {
-  var lines = readFile('day2_input.txt');
+  var lines = readFile('day02_input.txt');
   let counter = 0;
   let linenum = 0;
   for (line of lines) {

@@ -2,13 +2,13 @@ part1();
 part2();
 
 function part1() {
-  let lines = readFile("./day3_input.txt");
+  let lines = readFile("./day03_input.txt");
   let trees = treeCount(lines,3,1);
   console.log("Trees: " + trees);
 }
 
 function part2() {
-  let lines = readFile("./day3_input.txt");
+  let lines = readFile("./day03_input.txt");
   let trees = treeCount(lines,1,1);
   trees *= treeCount(lines,3,1);
   trees *= treeCount(lines,5,1);

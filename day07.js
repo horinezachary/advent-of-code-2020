@@ -2,7 +2,7 @@ part1();
 part2();
 
 function part1() {
-  let lines = readFile("./day7_input.txt");
+  let lines = readFile("./day07_input.txt");
   let bags = [];
   for (line of lines) {
     let holder = line.substring(0,line.indexOf("s contain "));
@@ -22,7 +22,7 @@ function part1() {
 }
 
 function part2() {
-  let lines = readFile("./day7_input.txt");
+  let lines = readFile("./day07_input.txt");
   let bags = [];
   for (line of lines) {
     let holder = line.substring(0,line.indexOf("s contain "));

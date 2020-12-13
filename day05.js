@@ -3,7 +3,7 @@ part2();
 //testPasses();
 
 function part1() {
-  let lines = readFile("./day5_input.txt");
+  let lines = readFile("./day05_input.txt");
   let maxSeat = 0;
   for (line of lines) {
     let ret = consumeInput(line,0,127,0,7)
@@ -15,7 +15,7 @@ function part1() {
 }
 
 function part2() {
-  let lines = readFile("./day5_input.txt");
+  let lines = readFile("./day05_input.txt");
   let seats = [];
   for (line of lines) {
     let ret = consumeInput(line,0,127,0,7)
@@ -34,7 +34,7 @@ function part2() {
 
 part2reduced();
 function part2reduced() {
-  let lines = require('fs').readFileSync("./day5_input.txt",'utf8').split('\n');
+  let lines = require('fs').readFileSync("./day05_input.txt",'utf8').split('\n');
   lines = lines.map(string=>{return parseInt(string.replace(/[FL]/g,"0").replace(/[BR]/g,"1"),2)}).sort((a,b)=>{return a - b});
   console.log(lines.sort((a,b)=>{return a - b}).filter(line=>{return (lines[lines.indexOf(line)-1] != line -1)}));
 }

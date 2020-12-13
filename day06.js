@@ -2,7 +2,7 @@ part1();
 part2();
 
 function part1() {
-  let lines = readFile("./day6_input.txt");
+  let lines = readFile("./day06_input.txt");
   let answer = 0;
   let alphabet = [];
   for (line of lines) {
@@ -26,7 +26,7 @@ function part1() {
 }
 
 function part2() {
-  let lines = readFile("./day6_input.txt");
+  let lines = readFile("./day06_input.txt");
   let answer = 0;
   let first = true;
   let alphabet = [];
